@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./prisma:/app/prisma
+    environment:
+      - DATABASE_URL=file:./prisma/dev.db
+      - JWT_SECRET=linkvault_super_secret_key
+      - PORT=3000
+    restart: unless-stopped
+
+  frontend:
+    build: ./linkvault-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
