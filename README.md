@@ -2,6 +2,9 @@
 # 🔗 LinkVault
 
 > **Gerenciador inteligente de links com IA local** — salve qualquer link e deixe a IA categorizar, gerar tags e resumir automaticamente. 100% gratuito, open-source e roda na sua máquina.
+>## ScreenShot 
+> <img width="1920" height="899" alt="screenshot png" src="https://github.com/user-attachments/assets/d75ed931-6c5e-4d84-9df2-da7b64536f26" />
+
 
 
 ![Node.js](https://img.shields.io/badge/Node.js-20-339933?style=flat-square&logo=node.js&logoColor=white)
