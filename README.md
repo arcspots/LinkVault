@@ -1,3 +1,4 @@
+
 # 🔗 LinkVault
 
 > **Gerenciador inteligente de links com IA local** — salve qualquer link e deixe a IA categorizar, gerar tags e resumir automaticamente. 100% gratuito, open-source e roda na sua máquina.
