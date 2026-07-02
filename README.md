@@ -229,6 +229,15 @@ model User {
   collections Collection[]
 }
 
+model Collection {
+  id        Int      @id @default(autoincrement())
+  name      String
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id])
+  links     Link[]
+  createdAt DateTime @default(now())
+}
+
 model Link {
   id           Int         @id @default(autoincrement())
   url          String
@@ -237,19 +246,14 @@ model Link {
   image        String?
   category     String?
   tags         String?
-  summary      String?     ← gerado pela IA
+  summary      String?     // gerado pela IA
   favorite     Boolean     @default(false)
   clicks       Int         @default(0)
   collectionId Int?
+  collection   Collection? @relation(fields: [collectionId], references: [id])
   userId       Int
+  user         User        @relation(fields: [userId], references: [id])
   createdAt    DateTime    @default(now())
-}
-
-model Collection {
-  id        Int    @id @default(autoincrement())
-  name      String
-  userId    Int
-  links     Link[]
 }
 ```
 
